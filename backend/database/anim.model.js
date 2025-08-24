@@ -1,7 +1,7 @@
 // create a task model
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
-const AnimSchema = new mongoose.Schema({
+const animSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
@@ -14,6 +14,5 @@ const AnimSchema = new mongoose.Schema({
   },
 });
 
-const Anim = mongoose.model("Anim", AnimSchema);
+export default mongoose.model("Anim", animSchema);
 
-module.exports = Anim;

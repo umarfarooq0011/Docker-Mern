@@ -1,17 +1,14 @@
 // create a connection to our MongoDB database
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
-function connect() {
-  mongoose
-    .connect(process.env.DB_URL)
-    .then(() => {
-      console.log("Successfully connected to database");
-    })
-    .catch((err) => {
-      console.log("database connection failed. exiting now...");
-      console.error(err);
-      process.exit(1);
-    });
-}
+const connect = async () => {
+  try {
+    await mongoose.connect("mongodb://db:27017/anime");
+    console.log("Connected to MongoDB".green);
+  } catch (error) {
+    console.error("Error connecting to MongoDB:".red, error);
+  }
+};
 
-module.exports = connect;
+export default connect;
+

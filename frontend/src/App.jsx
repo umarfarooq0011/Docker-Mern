@@ -14,9 +14,18 @@ function App() {
           <Link to="/" className="navbar_link">
             Home
           </Link>
-          <Link to="/create" className="navbar_link">
-            Share
-          </Link>
+            <Link to="/create" className="navbar_link">
+              Share
+            </Link>
+
+            <Link to="/about" className="navbar_link">
+              About
+            </Link>
+
+            <Link to="/contact" className="navbar_link">
+              Contact
+            </Link>
+
         </div>
       </nav>
 

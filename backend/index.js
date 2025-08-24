@@ -1,13 +1,12 @@
-const express = require("express");
-const cors = require("cors");
-const dotenv = require("dotenv");
-const colors = require("colors");
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import colors from "colors";
+import Anim from "./database/anim.model.js";  // Note the .js extension
+import connect from "./database/connect.js";   // Note the .js extension
 
 dotenv.config();
 colors.enable();
-
-const Anim = require("./database/anim.model");
-const connect = require("./database/connect");
 
 const app = express();
 
